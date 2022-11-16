@@ -1,0 +1,63 @@
+@import './variable-base';
+
+.footer {
+    width: 100%;
+    bottom: 0;
+
+    .footer__part {
+        //position: absolute;
+        //bottom: 0;
+        //height: 200px;
+        //display: flex;
+        //flex-direction: column;
+        justify-content: center;
+        color: white;
+        background-color: #0d6870;
+        width: auto;
+        .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            .footer__item {
+                &.--border {
+                    border: solid rgb(219, 219, 219);
+                    border-width: 0 2px 0 2px;
+                }
+
+                h2 {
+                    @include text($text-15, $text-bold, $text-primary);
+                    margin-bottom: 5px;
+                    padding-top: 10px;
+                    color: white;
+                }
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        list-style: none;
+                        line-height: 20px;
+
+                        span {
+                            font-weight: 600;
+                        }
+
+                        a {
+                            @include text($size: 12px);
+                            color: white;
+                        }
+                    }
+                }
+
+                p {
+                    @include text($size: 15px);
+                    margin-bottom: 4px;
+                }
+
+                &>a {
+                    @include text($size: 12px, $color: rgb(200, 80, 79));
+                }
+            }
+        }
+    }
+}
